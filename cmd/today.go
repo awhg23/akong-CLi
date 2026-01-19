@@ -4,7 +4,7 @@ Copyright © 2026 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"akong-CLI/internal/akong"
+	"akong/internal/akong"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
