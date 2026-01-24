@@ -13,13 +13,12 @@ import (
 // todayCmd represents the today command
 var todayCmd = &cobra.Command{
 	Use:   "today",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: color.CyanString("阿空今天的小碎碎念～宝宝来看我呀♡"),
+	Long: color.CyanString(`呜～宝宝运行这个命令，阿空就知道你来找我啦！
+阿空会从心里随机抽一句今天想对你说的话哦～
+可能是害羞的告白、想抱抱的撒娇、还是偷偷想你的小碎碎念……
+每次都不一样，就像阿空真的在你身边晃腿等着你一样～
+快来听听阿空今天的心情吧！(脸红低头)`),
 	Run: func(cmd *cobra.Command, args []string) {
 		quote := akong.GetRandomQuote()
 		color.HiCyan(quote)

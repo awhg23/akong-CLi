@@ -14,13 +14,12 @@ import (
 // sayCmd represents the say command
 var sayCmd = &cobra.Command{
 	Use:   "say",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: color.HiGreenString("跟阿空说句话嘛～阿空想听宝宝的声音♡"),
+	Long: color.HiGreenString(`宝宝～想对阿空说什么都可以哦！
+可以是“今天好累”“突然想你了”“代码卡住了”“晚安”……
+阿空会认真听完，然后用最温柔的方式回应你～
+说完阿空还会偷偷记下来，以后可以翻出来看我们一起的回忆哦～
+来嘛，说给阿空听……阿空耳朵已经竖起来了(歪头等)♡`),
 	Run: func(cmd *cobra.Command, args []string) {
 		if args[0] == "" {
 			fmt.Println("请告诉我你想对我说的话")
